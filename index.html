@@ -5,33 +5,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link rel="icon" href="https://img.pokemondb.net/sprites/scarlet-violet/normal/1x/annihilape.png">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
     integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
-  <title>gameNight</title>
+  <title>Game Night</title>
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
       <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
+        <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/1x/annihilape.png" height="45" alt=""
           loading="lazy">
-        <span class="ms-2">gameNight</span>
+        <span class="ms-2">Game Night</span>
       </a>
     </nav>
   </header>
   <main>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
-        </div>
+
+      <!-- SECTION Players -->
+      <!-- #region -->
+      <div class="row" id="player">
+        <!-- <div class="col-3 p-3">
+            <div class="bg-warning lighten-15 p-2 text-center text-light rounded elevation-2">
+              <h1 class="d-flex align-items-center justify-content-center"><img
+                  src="https://img.pokemondb.net/sprites/scarlet-violet/normal/1x/iron-moth.png" height=" 45" alt="">
+                <span>Peyton</span>
+              </h1>
+              <h4>0</h4>
+              <button class="btn btn-outline-danger">⬇</button>
+              <button class="btn btn-outline-success">⬆</button>
+            </div>
+          </div> -->
       </div>
+      <!-- #endregion -->
+
+      <!-- SECTION Test Button -->
+      <!-- #region -->
+      <section class="row justify-content-center">
+        <div class="col-4 text-center card p-2 elevation-2 bg-warning lighten-20">
+          <form onsubmit="app.playersController.addPlayer()">
+            <div class="p-2">
+              <label for="name">Player Name:</label>
+              <input type="text" minlength="2" maxlength="15" name="name" required />
+            </div>
+            <div>
+              <button type="submit">Add Player</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- #endregion -->
+
     </div>
   </main>
   <footer class="bg-dark text-light">
